@@ -25,14 +25,7 @@ export default function Navbar() {
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <li><a className="nav-link" href="#projects">PROJECTS</a></li>
           <li><a className="nav-link" href="https://www.linkedin.com/in/dravingupta">CONTACT</a></li>
-          <li>
-            <a
-              className="nav-link btn btn-primary"
-              href="#"
-            >
-              RESUME <i className="fas fa-arrow-right"></i>
-            </a>
-          </li>
+          
 
           <div className="theme-switch">
             <input
