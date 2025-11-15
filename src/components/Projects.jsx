@@ -6,6 +6,13 @@ const projectsData = [
     github: 'https://github.com/Dravingupta/digiQ',
     live: 'https://digi-q-ivory.vercel.app/' ,
   },
+  {
+    id: 2,
+    title: 'Trading Journal',
+    tech: 'Built using the MERN stack',
+    github: 'https://github.com/Dravingupta/Trading-Journal',
+    live: 'https://trading-journal-swart-six.vercel.app' ,
+  },
   // ...add more projects
 ];
 
