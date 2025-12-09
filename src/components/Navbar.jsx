@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import moonIcon from '../assets/moon.svg';
 import sunIcon from '../assets/sun.svg';
@@ -17,15 +18,17 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="container">
         <h1 id="logo">
-          <a href="/">
+          <Link to="/">
             <img src={logoImg} alt="Your Logo" />
-          </a>
+          </Link>
         </h1>
 
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
-          <li><a className="nav-link" href="#projects">PROJECTS</a></li>
-          <li><a className="nav-link" href="https://www.linkedin.com/in/dravingupta">CONTACT</a></li>
-          
+          <li><Link className="nav-link" to="/about">ABOUT</Link></li>
+          <li><a className="nav-link" href="https://anti-blog.vercel.app/" target="_blank" rel="noreferrer">BLOGS</a></li>
+          <li><Link className="nav-link" to="/#projects">PROJECTS</Link></li>
+          <li><a className="nav-link" href="https://www.linkedin.com/in/dravingupta" style={{ backgroundColor: '#FFCF41', color: '#000', padding: '8px 16px', borderRadius: '30px', fontWeight: '600' }}>CONTACT</a></li>
+
 
           <div className="theme-switch">
             <input

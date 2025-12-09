@@ -178,7 +178,7 @@ body {
 /* default grid for multiple cards */
 .project {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(283px, 283px);
   grid-gap: 0.9rem;
 }
@@ -209,7 +209,8 @@ body {
   opacity: 0;
   position: relative;
   transition: 0.5s ease-in-out;
-  z-index: 1; /* ensure above overlay */
+  z-index: 1;
+  /* ensure above overlay */
 }
 
 .project-bio {
@@ -270,56 +271,61 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-}
+@media (max-width: 768px) {}
 
 @media (max-width: 670px) {
   .navbar .nav-menu {
     position: fixed;
-    right: -100vw;
-    top: 4.5rem;
+    right: -100%;
+    top: 0;
     flex-direction: column;
-    width: calc(80% - 10px);
-    transition: 0.3s;
-    box-shadow: var(--shadow);
-    padding: 2rem;
-    border-radius: 5px;
-    align-items: flex-start;
-  }
-
-  .navbar .btn {
-    margin: 0;
-    margin-top: 1rem;
+    width: 75%;
+    height: 100vh;
+    transition: 0.4s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-primary);
+    backdrop-filter: blur(10px);
+    padding: 6rem 2rem;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 99;
   }
 
   .nav-menu.active {
-    right: 20px;
+    right: 0;
+  }
+
+  .navbar .btn {
+    margin: 1.5rem 0 0 0;
   }
 
   .nav-menu .nav-link {
-    font-size: 0.9rem;
-    margin: 0 0.2rem;
+    font-size: 1.1rem;
+    margin: 1.2rem 0;
+    display: inline-block;
   }
 
   .nav-menu li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     width: 100%;
+    text-align: center;
   }
 
   .nav-menu .btn {
     width: 100%;
     text-align: center;
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
   }
 
   .hamburger {
     display: block;
     cursor: pointer;
     padding: 0.2rem 0.4rem;
+    z-index: 100;
   }
 
-  .hamburger.active {
-    border: 1px dotted gray;
+  .hamburger.active .bar {
+    background-color: var(--text-primary);
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -327,7 +333,7 @@ body {
   }
 
   .hamburger.active .bar:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
   }
 
   .hamburger.active .bar:nth-child(3) {

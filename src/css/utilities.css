@@ -49,7 +49,7 @@ h2::selection {
   --bg-secondary: #000000;
   --text-primary: #000000;
   --text-secondary: #ffffff;
-  --card-background: rgba(0, 0, 0, 0.4);
+  --card-background: rgba(0, 0, 0, 0.05);
 }
 
 :root.dark-mode {
@@ -106,7 +106,7 @@ body {
   cursor: pointer;
 }
 
-.toggle-icons > img {
+.toggle-icons>img {
   transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   width: 30px;
 }
@@ -115,11 +115,11 @@ body {
   transform: rotate(10deg);
 }
 
-#switch:checked + .toggle-icons .moon {
+#switch:checked+.toggle-icons .moon {
   transform: rotate(250deg);
 }
 
-#switch:checked + .toggle-icons .sun {
+#switch:checked+.toggle-icons .sun {
   transform: rotate(100deg);
 }
 
@@ -133,7 +133,7 @@ body {
   padding: 1rem;
 }
 
-.header-container > div {
+.header-container>div {
   margin-top: 1rem;
 }
 
@@ -162,8 +162,10 @@ body {
   border-radius: 5px;
   transition: 0.4s ease-in-out;
   cursor: pointer;
-  position: relative;        /* needed for overlay */
-  overflow: hidden;          /* hide overlay edges */
+  position: relative;
+  /* needed for overlay */
+  overflow: hidden;
+  /* hide overlay edges */
 }
 
 /* overlay to improve text contrast on light images */
@@ -172,22 +174,19 @@ body {
   inset: 0;
   content: "";
   pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.25) 0%,
-    rgba(0, 0, 0, 0.45) 100%
-  );
-  opacity: 1;                /* always on for readability */
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 0, 0, 0.45) 100%);
+  opacity: 1;
+  /* always on for readability */
   z-index: 0;
 }
 
 /* make overlay a bit stronger on hover for drama */
 .card:hover .card-overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.35) 0%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0.6) 100%);
 }
 
 /* put actual content above overlay */
@@ -200,7 +199,7 @@ body {
 .card .project-bio h3,
 .card .project-bio p,
 .card .project-link a {
-  text-shadow: 0 1px 6px rgba(0,0,0,0.55);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
 }
 
 .card a {
@@ -233,6 +232,10 @@ body {
   background: url(../assets/project/project-two.png) center center/cover;
 }
 
+.card:nth-child(3) {
+  background: url(../assets/project/project-three.png) center center/cover;
+}
+
 
 
 /* Media Queries */
@@ -246,5 +249,3 @@ body {
     font-size: 2.5rem;
   }
 }
-
-
