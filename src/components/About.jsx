@@ -4,7 +4,7 @@ import '../css/about.css';
 export default function About() {
     return (
         <div className="about-page">
-            {/* Hero Section */}
+           
             <section className="about-hero">
                 <div className="container">
                     <div className="about-hero-content">
@@ -22,7 +22,7 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Bio Section */}
+         
             <section>
                 <div className="container">
                     <div className="bio-content">
@@ -52,7 +52,7 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Tech Stack Section */}
+           
             <section className="tech-stack">
                 <div className="container">
                     <h2>Tech Stack</h2>
@@ -77,13 +77,13 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Projects Highlight Section */}
+           
             <section className="projects-highlight">
                 <div className="container">
                     <h2>Featured Projects</h2>
                     <div className="projects-grid">
 
-                        {/* DigiQ */}
+                       
                         <div className="project-highlight-card">
                             <h3>DigiQ - Digital Queue Management</h3>
                             <p className="project-description">
@@ -96,7 +96,6 @@ export default function About() {
                             </div>
                         </div>
 
-                        {/* Trading Journal */}
                         <div className="project-highlight-card">
                             <h3>Trading Journal App</h3>
                             <p className="project-description">
@@ -111,7 +110,7 @@ export default function About() {
                             </div>
                         </div>
 
-                        {/* Anti Blog */}
+                      
                         <div className="project-highlight-card">
                             <h3>Anti Blog</h3>
                             <p className="project-description">
@@ -130,7 +129,6 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Achievements Section */}
             <section className="achievements">
                 <div className="container">
                     <h2>Achievements & Activities</h2>
@@ -154,7 +152,7 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Interests Section */}
+         
             <section className="interests">
                 <div className="container">
                     <h2>Beyond Code</h2>
@@ -175,7 +173,7 @@ export default function About() {
                 </div>
             </section>
 
-            {/* CTA Section */}
+       
             <section className="about-cta">
                 <div className="container">
                     <h2>Let's Connect!</h2>
